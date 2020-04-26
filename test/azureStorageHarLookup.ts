@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.// Licensed under the MIT license.
-import config from "../src/app/config";
+import config from "../src/App/config";
 var sinon = require('sinon');  
-import AzureStorageHarLookup from "../src/app/azureStorageHarLookup.js";
+import AzureStorageHarLookup from "../src/App/azureStorageHarLookup.js";
 import * as chai from "chai";
 let assert = chai.assert;
 

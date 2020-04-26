@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.// Licensed under the MIT license.
-import Entry from "./harFile/entry.js";
+import Entry from "./HarFile/entry.js";
 import Config from "./config.js";
 import Logger from "./logger.js";
-import HarFile from "./harFile/harFile.js";
+import HarFile from "./HarFile/harFile.js";
 import HarFileList from "./harFileList.js";
 import harServerUrl from "./harServerUrl.js";
 import * as fs from "fs";

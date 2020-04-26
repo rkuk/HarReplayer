@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.// Licensed under the MIT license.
 import Config from "./../config.js";
-import Entry from "./../harFile/entry.js";
-import HarFile from "./../harFile/harFile.js";
+import Entry from "./../HarFile/entry.js";
+import HarFile from "./../HarFile/harFile.js";
 import harServerUrl from "./../harServerUrl.js"
 import * as XRegExp from "xregexp";
 var StringBuilder = require('string-builder');

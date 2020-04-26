@@ -1,3 +1,8 @@
+# Complaint to the original coders from Microsoft
+Haven't thought that the coders from Microsoft are badly desultory, no wonder Windows blue screen is so famous. This is the first and the only repo which has compiling problems when I clone it from github, due to the damn case insensitive spelling of the coders, and so is Windows. Then I fork the original repo to rectify all the misspellings and recompile all ts files to js files so that it can be compiled and run on linux.
+
+To recompile ts to js, clone this repo and run `npm i && npx tsc`, then use `npm start` to run.
+
 # HarReplayer
 A proxy server that replays responses from HTTP archive (HAR) files
 

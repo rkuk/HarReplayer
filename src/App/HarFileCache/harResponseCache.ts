@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.// Licensed under the MIT license.
 import Config from "./../config.js";
-import Entry from "./../harFile/entry.js";
-import HarFile from "./../harFile/harFile.js";
-import HarResponseCacheFile from "./HarResponseCacheFile.js";
+import Entry from "./../HarFile/entry.js";
+import HarFile from "./../HarFile/harFile.js";
+import HarResponseCacheFile from "./harResponseCacheFile.js";
 import AzureStorageHarLookup from "./../azureStorageHarLookup.js";
 import DiskHarLookup from "./../diskHarLookup.js";
 import HarServerUrl from "./../harServerUrl.js";

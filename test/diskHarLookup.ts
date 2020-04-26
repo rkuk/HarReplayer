@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.// Licensed under the MIT license.
-import HarFile from "../src/app/harFile/harFile.js";
-import config from "../src/app/config";
-import DiskHarLookup from "../src/app/diskHarLookup.js";
+import HarFile from "../src/App/HarFile/harFile.js";
+import config from "../src/App/config";
+import DiskHarLookup from "../src/App/diskHarLookup.js";
 import * as chai from "chai";
 
 let assert = chai.assert;

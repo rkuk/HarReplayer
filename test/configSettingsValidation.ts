@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.// Licensed under the MIT license.
 import * as express from "express";
-import config from "../src/app/config";
-import * as harServer from "../src/App/harserver.js";
-import HarResponseCache from "../src/app/harfilecache/harresponsecache.js"
-import HarResponseCacheFile from "../src/app/harfilecache/harresponsecachefile.js"
-import harServerUrl from "../src/app/harServerUrl.js"
-import Entry from "../src/app/harFile/entry.js";
+import config from "../src/App/config";
+import * as harServer from "../src/App/harServer.js";
+import HarResponseCache from "../src/App/HarFileCache/harResponseCache.js"
+import HarResponseCacheFile from "../src/App/HarFileCache/harResponseCacheFile.js"
+import harServerUrl from "../src/App/harServerUrl.js"
+import Entry from "../src/App/HarFile/entry.js";
 import * as testhelper from "./testhelper.js";
 import * as chai from "chai";
 

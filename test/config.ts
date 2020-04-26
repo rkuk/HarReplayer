@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.// Licensed under the MIT license.
-import config from "../src/app/config";
+import config from "../src/App/config";
 import * as chai from "chai";
 
 let assert = chai.assert;

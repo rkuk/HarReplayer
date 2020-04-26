@@ -1,10 +1,10 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.// Licensed under the MIT license.
-import Entry from "./harFile/entry.js";
-import HarFile from "./harFile/harFile.js";
+import Entry from "./HarFile/entry.js";
+import HarFile from "./HarFile/harFile.js";
 import Config from "./config.js";
 import Logger from "./logger.js";
 import HarResponseCache from "./HarFileCache/harResponseCache.js";
-import HarResponseCacheFile from "./HarFileCache/HarResponseCacheFile.js";
+import HarResponseCacheFile from "./HarFileCache/harResponseCacheFile.js";
 import harServerUrl from "./harServerUrl.js"
 
 export default class HarFileList {

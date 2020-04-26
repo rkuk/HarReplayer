@@ -84,7 +84,7 @@ export default class harServerUrl {
         try {
             this.queryParams = queryString.parse(parsedUrl.query);        
         }
-        catch { // backup method that won't throw 'malformed URI' exception
+        catch(e) { // backup method that won't throw 'malformed URI' exception
             this.queryParams = parseQuery(parsedUrl.query);
         }
 
