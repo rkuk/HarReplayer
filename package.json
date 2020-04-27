@@ -12,7 +12,9 @@
     "server"
   ],
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "build": "tsc",
+    "clean": "find . -path './node_modules' -prune -o -name '*.js' -exec rm {} \\;"
   },
   "repository": {
     "type": "git",

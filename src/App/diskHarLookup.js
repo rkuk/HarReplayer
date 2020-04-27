@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs");
+const path_1 = require("path");
 const config_js_1 = require("./config.js");
 const logger_js_1 = require("./logger.js");
 var azure = require('azure-storage');
@@ -15,7 +16,7 @@ class DiskHarLookup {
         return DiskHarLookup._instance;
     }
     LoadFile(filename, onDownloaded) {
-        var harFilePath = this.harFilesFolder + '\\' + filename;
+        var harFilePath = this.harFilesFolder + path_1.sep + filename;
         fs.readFile(harFilePath, function read(err, data) {
             if (!err) {
                 onDownloaded(data);
