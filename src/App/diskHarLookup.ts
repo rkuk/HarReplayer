@@ -1,38 +1,38 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.// Licensed under the MIT license.
 import * as fs from 'fs';
-import {sep} from 'path';
+import {resolve} from 'path';
 import harServerUrl from "./harServerUrl.js"
 import Config from "./config.js";
 import Logger from "./logger.js";
 var azure = require('azure-storage');
 
 export default class DiskHarLookup {
-  
-  private harFilesFolder: string = Config.Instance().HarFilePath;
-  private static _instance: DiskHarLookup = null;
 
-  public static Instance(): DiskHarLookup {
-    if (DiskHarLookup._instance === null) {
-      DiskHarLookup._instance = new DiskHarLookup();
-    }
+private harFilesFolder: string = Config.Instance().HarFilePath;
+private static _instance: DiskHarLookup = null;
 
-    return DiskHarLookup._instance;
-  }
+public static Instance(): DiskHarLookup {
+if (DiskHarLookup._instance === null) {
+DiskHarLookup._instance = new DiskHarLookup();
+}
 
-  public LoadFile(filename: string, onDownloaded) {
-    var harFilePath = this.harFilesFolder + sep + filename;
-    fs.readFile(harFilePath, function read(err, data) {
-      if (!err){
-        onDownloaded(data);
-      }
-      else {
-        Logger.Instance().Log('error', 'Error reading har file from disk: ' + err.message);
-        onDownloaded(null);
-      }
-    });
-  }
+return DiskHarLookup._instance;
+}
 
-  public FindFromRequest(harFileName: string, onHarFileFound) {
-    onHarFileFound(harFileName);
-  }
+public LoadFile(filename: string, onDownloaded) {
+var harFilePath = resolve(this.harFilesFolder, filename);
+fs.readFile(harFilePath, function read(err, data) {
+if (!err){
+onDownloaded(data);
+}
+else {
+Logger.Instance().Log('error', 'Error reading har file from disk: ' + err.message);
+onDownloaded(null);
+}
+});
+}
+
+public FindFromRequest(harFileName: string, onHarFileFound) {
+onHarFileFound(harFileName);
+}
 }

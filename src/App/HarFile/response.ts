@@ -42,7 +42,15 @@ export default class Response {
         }
         else {
             if (this.content_text && this.content_text.length > 0) {
-                this.contentBuffer = new Buffer(this.content_text, this.content_encoding);
+                if (Buffer.from && Buffer.from !== Uint8Array.from) {
+                    this.contentBuffer = Buffer.from(this.content_text, this.content_encoding);
+                }
+                else if (typeof this.content_text === 'number') {
+                    throw new Error('The "size" argument must be not of type number.');
+                }
+                else{
+                    this.contentBuffer = new Buffer(this.content_text, this.content_encoding);
+                }
             }
 
             return this.contentBuffer;

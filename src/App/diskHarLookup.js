@@ -16,7 +16,7 @@ class DiskHarLookup {
         return DiskHarLookup._instance;
     }
     LoadFile(filename, onDownloaded) {
-        var harFilePath = this.harFilesFolder + path_1.sep + filename;
+        var harFilePath = path_1.resolve(this.harFilesFolder, filename);
         fs.readFile(harFilePath, function read(err, data) {
             if (!err) {
                 onDownloaded(data);
